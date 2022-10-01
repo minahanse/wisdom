@@ -25,7 +25,6 @@ def get_data() -> Tuple[Any, Any]:
 
 def main():
     number_of_quotes = int(os.getenv("QUOTES", 1))
-    quote, author = get_data()
 
     # Limit maximum to 5 to prevent API overload.
     if number_of_quotes > 5:
