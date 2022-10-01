@@ -19,9 +19,8 @@ def get_data() -> Tuple[Any, Any]:
         data = response.json()
         return data.get("quoteText"), data.get("quoteAuthor")
 
-    else:
-        print(f"Failed to get data from API, error: {response.status_code}")
-        return None, None
+    print(f"Failed to get data from API, error: {response.status_code}")
+    return None, None
 
 
 def main():
