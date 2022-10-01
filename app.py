@@ -1,10 +1,12 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import json, requests
-from typing import Optional
+import json
 import os
 from time import sleep
+from typing import Optional
+
+import requests
 
 def get_data() -> Optional[dict]:
     url = "https://api.chucknorris.io/jokes/random"
@@ -13,10 +15,9 @@ def get_data() -> Optional[dict]:
     
     if response.status_code == 200:
         return json.loads(response.content)
-        
-    else:
-        print(f"Failed to get data from API, error: {response.status_code}")
-        return False
+
+    print(f"Failed to get data from API, error: {response.status_code}")
+    return False
 
 def main():
     joke = jokes_data.get("value") 
