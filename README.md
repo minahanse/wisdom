@@ -1,6 +1,8 @@
-# wisdom
+# Wisdom
 
-Generates random wisdom quote using an API.
+Feeling unmotivated? Feeling down? Want a pick me up or something to ponder over?
+
+Wisdom generates a random quote for you to enjoy.
 
 ## Example
 
