@@ -7,9 +7,7 @@ from time import sleep
 from typing import Optional
 
 import requests
-
 URL = "http://api.forismatic.com/api/1.0/"
-
 
 def get_data() -> Optional[dict]:
     response = requests.post(
@@ -17,11 +15,10 @@ def get_data() -> Optional[dict]:
     )
 
     if response.status_code == 200:
-        return response.json()
+        return json.loads(response.content)
 
-    else:
-        print(f"Failed to get data from API, error: {response.status_code}")
-        return False
+    print(f"Failed to get data from API, error: {response.status_code}")
+    return False
 
 
 def main():
